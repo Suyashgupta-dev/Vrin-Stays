@@ -1,26 +1,16 @@
-# Vrin Mart
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Planning for the Project Required Web Pages Required :-
+Currently, two official plugins are available:
 
-1. Landing Page:-
-        Search Section, 
-        Some Content, 
-        Customer review show Section, 
-        Form for Suggestion
-2. Home Page --> List of all Top Hotels, Note: Try to inbuilt automatic location detector and list top hotels.
-3. Hotel Detail Page --> A detail view of Particular Hotel
-4. Search Hotel Page --> Search for Hotels
-5. Whishlist Page
-6. Confirmation Page
-7. Authentication Page --> Coming Soon
-8. Payment Gateway --> Coming Soon
-9. Contact Us
-10. Management Teams
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-# Technologies Used
+## React Compiler
 
-1. Html
-2. Tailwindcss
-3. React.js
-4. Jsx
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
