@@ -20,13 +20,15 @@ function Routing() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Hotellist" element={<Hotellist />} />
         <Route path="/Search" element={<SearchHotelPage/>} />
-        <Route path="/Detials" element={<HotelDetailPage/>} />
+        {/* <Route path="/Detials" element={<HotelDetailPage/>} /> */}
         <Route path="/Whishlist" element={<Whishlist/>} />
         <Route path="/Conmfirmation" element={<ConfirmationPage/>} />
         <Route path="/Authentication" element={<AuthenticationPage/>} />
         <Route path="/PaymentGateway" element={<PaymentGatewayPage/>} />
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/OurTeam" element={<OurTeamPage/>} />
+        <Route path="/hotel/:id" element={<HotelDetailPage/>} />
+
       </Routes>
     </Router>
   );

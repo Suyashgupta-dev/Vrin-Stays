@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="bg-slate-900 text-white p-4 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="text-xl font-bold tracking-wide text-amber-500 flex-shrink-0">
-          VRIN<span className="text-white">STAYS</span>
+        VRIN<span className="text-white">STAYS</span>
         </div>
 
         <div className="flex items-center gap-8">
@@ -41,9 +41,9 @@ function Navbar() {
             {isOpen && (
               <div className="absolute right-0 mt-3 w-48 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50">
                 <ul>
-                  <li className="block px-4 py-2 hover:bg-slate-700 hover:text-amber-400">
+                  {/* <li className="block px-4 py-2 hover:bg-slate-700 hover:text-amber-400">
                     <Link to="/Detials">Hotels Details</Link>
-                  </li>
+                  </li> */}
                   <li className="block px-4 py-2 hover:bg-slate-700 hover:text-amber-4000">
                     <Link to="/Whishlist">Whishlist</Link>
                   </li>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { IoStarSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Home() {
@@ -75,6 +76,7 @@ export default function Home() {
                         location={el.location}
                         rating={el.rating}
                         price={el.price}
+                        id={el.id}
                     />
                 ))}
             </div>
@@ -121,19 +123,23 @@ export default function Home() {
     );
 }
 
-export function Product({ name, thumbnail, des, location, rating, price }) {
+export function Product({ id, name, thumbnail, des, location, rating, price }) {
+    const navigate=useNavigate()
+    function todetail(id){
+        navigate(`/hotel/${id}`)
+    }
     return (
         <div className="flex flex-col sm:flex-row gap-6 p-5 bg-white border border-gray-400 rounded-xl shadow-sm hover:shadow-md transition-shadow" >
-            <div className="w-full sm:w-[220px] h-[140px] flex-shrink-0">
+            <div onClick={()=>{todetail(id)}} onClick={()=>{todetail(id)}} className="w-full sm:w-[220px] h-[140px] flex-shrink-0">
                 <img src={thumbnail} 
                     alt={name} 
-                    className="w-full h-full object-cover rounded-lg bg-gray-100" src={thumbnail} alt="hotel" />
+                    className="w-full h-full object-cover rounded-lg bg-gray-100" />
             </div>
             <div className="flex flex-col justify-between flex-grow gap-2">
                 
                 <div>
-                    <h2 className="text-xl font-bold text-gray-800 t">{name}</h2>
-                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                    <h2 onClick={()=>{todetail(id)}}className="text-xl font-bold text-gray-800 t">{name}</h2>
+                    <p onClick={()=>{todetail(id)}}className="text-sm text-gray-600 mt-1 leading-relaxed">
                         {des ? `${des.slice(0, 180)}...` : "No description available."}
                     </p>
                 </div>
