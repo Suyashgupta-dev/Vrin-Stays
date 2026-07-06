@@ -10,6 +10,7 @@ import AuthenticationPage from './authentication_page';
 import PaymentGatewayPage from './payment_gateway_page';
 import Contact from './Contact_us_page';
 import OurTeamPage from './Our_team_page';
+import WishlistPage from "./Whishlist_page";
 
 function Routing() {
   return (
@@ -28,6 +29,10 @@ function Routing() {
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/OurTeam" element={<OurTeamPage/>} />
         <Route path="/hotel/:id" element={<HotelDetailPage/>} />
+        <Route path="/Wishlist" element={<WishlistPage />} />
+        <Route path="/confirmation" element={<ConfirmationPage />} />
+            <Route path="/payment" element={<PaymentGatewayPage />} />
+
 
       </Routes>
     </Router>

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import { IoStarSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+// import { addToWishlist } from "./Pages/store";
+import { addToWishlist } from "./store";
 
 export default function Home() {
     let [current, setCurrent] = useState(0);
@@ -128,6 +130,14 @@ export function Product({ id, name, thumbnail, des, location, rating, price }) {
     function todetail(id){
         navigate(`/hotel/${id}`)
     }
+     const dispatch = useDispatch();
+    
+   const handleAddToWishlist = (e) => {
+        e.stopPropagation(); 
+        dispatch(addToWishlist({ id, name, thumbnail, location, rating, price }));
+        alert(`${name} added to wishlist!`);
+        navigate("/Wishlist"); 
+    };
     return (
         <div className="flex flex-col sm:flex-row gap-6 p-5 bg-white border border-gray-400 rounded-xl shadow-sm hover:shadow-md transition-shadow" >
             <div onClick={()=>{todetail(id)}} onClick={()=>{todetail(id)}} className="w-full sm:w-[220px] h-[140px] flex-shrink-0">
@@ -152,11 +162,14 @@ export function Product({ id, name, thumbnail, des, location, rating, price }) {
                     </div>
                     <p><span className="font-semibold text-gray-700">Price:</span> <span className="text-emerald-600 font-bold">₹{price}</span></p>
                 </div>
-              <div className="mt-3 sm:mt-0 flex justify-end">
-                    <button className="px-4 py-2  font-medium text-slate-900  border border-slate-900  rounded-lg hover:bg-blue-50  focus:ring-blue-100 transition-all">
-                        Move to Wishlist
-                    </button>
-                </div>
+               <div className="mt-3 sm:mt-0 flex justify-end">
+            <button 
+                onClick={handleAddToWishlist}
+                className="px-4 py-2 text-sm font-medium text-slate-900 border border-slate-900 rounded-lg hover:bg-gray-50"
+            >
+                Move to Wishlist
+            </button>
+        </div>
             </div>
 
         </div>
