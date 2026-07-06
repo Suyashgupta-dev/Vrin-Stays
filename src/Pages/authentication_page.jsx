@@ -86,7 +86,6 @@ export default function AuthenticationPage() {
                             name="password" 
                             value={formData.password} 
                             onChange={handleChange} 
-                            placeholder="••••••••"
                             className="w-full p-2.5 border rounded-lg text-sm bg-gray-50 focus:bg-white outline-none focus:border-emerald-500 " 
                         />
                     </div>
