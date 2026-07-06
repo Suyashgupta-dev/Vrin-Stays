@@ -11,6 +11,9 @@ import PaymentGatewayPage from './payment_gateway_page';
 import Contact from './Contact_us_page';
 import OurTeamPage from './Our_team_page';
 import WishlistPage from "./Whishlist_page";
+import TP from './Children_contact/TP.jsx';
+import IG from './Children_contact/IG.jsx';
+import FB from './Children_contact/FB.jsx';
 
 function Routing() {
   return (
@@ -26,7 +29,11 @@ function Routing() {
         <Route path="/Conmfirmation" element={<ConfirmationPage/>} />
         <Route path="/Authentication" element={<AuthenticationPage/>} />
         <Route path="/PaymentGateway" element={<PaymentGatewayPage/>} />
-        <Route path="/Contact" element={<Contact/>} />
+        <Route path="/Contact" element={<Contact/>} >
+               <Route path="tp" element={<TP />} />
+               <Route path="ig" element={<IG />} />
+               <Route path="fb" element={<FB />} />
+        </Route>
         <Route path="/OurTeam" element={<OurTeamPage/>} />
         <Route path="/hotel/:id" element={<HotelDetailPage/>} />
         <Route path="/Wishlist" element={<WishlistPage />} />

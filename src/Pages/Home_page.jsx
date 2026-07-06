@@ -121,10 +121,7 @@ export default function HomePage() {
     );
 }
 
-
 function MiniHotelCard({ hotel, navigate }) {
-   
-
     return (
         <div 
             onClick={() => navigate(`/hotel/${hotel.id}`)}
