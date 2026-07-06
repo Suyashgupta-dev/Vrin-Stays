@@ -35,6 +35,15 @@ export default function OurTeamPage() {
                         <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
                         <p className="text-sm font-semibold text-emerald-600 mb-3">{member.role}</p>
                         <p className="text-sm text-gray-500 leading-relaxed">{member.bio}</p>
+                        <a 
+                             href="https://www.linkedin.com/in/suyz2025/" 
+                             target="_blank" 
+                             rel="noopener noreferrer" 
+                             className="text-blue-600 hover:underline text-sm font-semibold"
+                         >
+                            Visit Linked IN
+                         </a>
+                           
                     </div>
                 ))}
             </div>
